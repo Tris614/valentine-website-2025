@@ -51,7 +51,7 @@ const CONFIG = {
     // Messages that appear after they say "Yes!"
     celebration: {
         title: "Now I wonder where we're going 🤔🤔🤔",
-        message: "Yeeesss Great Success!! \nPS we've got an early start🤫🤓",
+        message: "Yeeesss Great Success!! PS we've got an early start🤫🤓",
         emojis: "🎁💖🤗💝💋🌼💕🌷🌹❤️"  // These will bounce around
         
     },
