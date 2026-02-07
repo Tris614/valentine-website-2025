@@ -5,8 +5,11 @@ const config = window.VALENTINE_CONFIG;
 function validateConfig() {
     const warnings = [];
 
-    // Check required fields
-
+  // Check required fields
+    if (!config.valentineName) {
+        warnings.push("Valentine's name is not set! Using default.");
+        config.valentineName = "My Love";
+    }
 
     // Validate colors
     const isValidHex = (hex) => /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/.test(hex);
@@ -54,7 +57,8 @@ document.title = config.pageTitle;
 window.addEventListener('DOMContentLoaded', () => {
     // Validate configuration first
     validateConfig();
-
+    // Set texts from config
+    document.getElementById('valentineTitle').textContent = `${config.valentineName}, my love...`;
     
     // Set first question texts
     document.getElementById('question1Text').textContent = config.questions.first.text;
